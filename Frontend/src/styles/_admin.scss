@@ -1,0 +1,278 @@
+.admin-dashboard {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  min-height: 100vh;
+  padding: 2rem;
+  background: var(--bg);
+}
+
+.admin-dashboard .main-content {
+  width: 100%;
+  max-width: 1280px;
+}
+
+.admin-dashboard .sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 1.75rem;
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.admin-dashboard .sidebar h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.55rem;
+}
+
+.admin-dashboard .sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-dashboard .sidebar li {
+  margin-bottom: 0.9rem;
+}
+
+.admin-dashboard .sidebar a,
+.admin-dashboard .sidebar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  background: var(--primary);
+  color: var(--sidebar-text);
+  border: none;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.admin-dashboard .sidebar a:hover,
+.admin-dashboard .sidebar button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.admin-dashboard .page-header {
+  margin-bottom: 1.75rem;
+}
+
+.admin-dashboard .page-header h1 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.admin-dashboard .page-header .intro-text {
+  margin: 0;
+  color: var(--text-muted);
+  max-width: 720px;
+}
+
+.admin-dashboard .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.admin-dashboard .stat-card {
+  background: var(--surface);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.admin-dashboard .stat-card span {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.admin-dashboard .stat-card strong {
+  font-size: 2.1rem;
+  color: var(--text);
+}
+
+.admin-dashboard .charts-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.admin-dashboard .chart-card {
+  background: var(--surface);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.admin-dashboard .chart-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.admin-dashboard .table-panel {
+  margin-top: 1.5rem;
+}
+
+.admin-dashboard .table-wrapper {
+  overflow-x: auto;
+  border-radius: 1.5rem;
+}
+
+.admin-dashboard .transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.admin-dashboard .transaction-table th,
+.admin-dashboard .transaction-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.admin-dashboard .transaction-table td:last-child {
+  min-width: 240px;
+}
+
+.admin-dashboard .transaction-table thead {
+  background: var(--surface-strong);
+}
+
+.admin-dashboard .transaction-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-dashboard .notice {
+  border-radius: 1rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.admin-dashboard .notice.success {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.admin-dashboard .notice.error {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+}
+
+.admin-dashboard .user-management-panel {
+  margin-top: 2rem;
+}
+
+.admin-dashboard .user-management-panel .section-head h2 {
+  margin-bottom: 0.25rem;
+}
+
+.admin-dashboard .user-management-panel .transaction-table th,
+.admin-dashboard .user-management-panel .transaction-table td {
+  padding: 0.95rem 1.2rem;
+}
+
+.admin-dashboard .transaction-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.admin-dashboard .action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  min-width: 140px;
+  height: 44px;
+  border: none;
+  border-radius: 0.9rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  color: white;
+  background: var(--primary);
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.admin-dashboard .action-button:disabled {
+  opacity: 1;
+  cursor: not-allowed;
+  background: var(--surface-strong);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.admin-dashboard .action-button:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(37, 99, 235, 0.12);
+}
+
+.admin-dashboard .action-button.delete {
+  background: var(--danger);
+}
+
+.admin-dashboard .action-button.delete:hover:not(:disabled) {
+  background: var(--danger-hover);
+}
+
+.admin-dashboard .action-button.delete {
+  background: var(--danger);
+}
+
+.admin-dashboard .action-button.delete:hover {
+  background: var(--danger-hover);
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1120px) {
+  .admin-dashboard {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 1rem;
+  }
+
+  .admin-dashboard .stat-card,
+  .admin-dashboard .chart-card,
+  .admin-dashboard .transaction-table {
+    border-radius: 1.25rem;
+  }
+
+  .admin-dashboard .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .admin-dashboard .transaction-table th,
+  .admin-dashboard .transaction-table td {
+    padding: 0.85rem 1rem;
+  }
+}
